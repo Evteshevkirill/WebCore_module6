@@ -1,0 +1,117 @@
+.description__wrapper {
+  max-width: 1366px;
+  padding: 16px 0;
+  margin-bottom: 16px;
+  background: linear-gradient(90deg, $color-main, $color-white);
+  border-top: 1px solid #d9fff5;
+}
+.description__title {
+  font-weight: $regular;
+  font-size: $size-title;
+  color: $color-grey;
+  text-transform: uppercase;
+}
+
+.brands {
+  &__wrapper {
+    margin-bottom: 24px;
+  }
+  &__item {
+    width: 240px;
+  }
+  &__item-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: $color-white;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+  }
+  &__item-btn {
+    border: none;
+    background-color: $color-white;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  &__item-btn:hover {
+    opacity: 50%;
+  }
+  &__item-img {
+    max-height: 40px;
+  }
+  &__btn {
+    display: none;
+  }
+  &__btn-text {
+    font-family: $font-family;
+    font-size: $size-title;
+    font-weight: $medium;
+    color: $text-color;
+  }
+}
+
+@media (min-width: $screen-768) {
+  .brands {
+    &__wrapper {
+      margin-bottom: 32px;
+    }
+    &__item {
+      width: 224px;
+    }
+    &__btn {
+      display: block;
+      border: none;
+      background-color: #f8f8f8;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      font-weight: 500;
+      font-size: 16px;
+      cursor: pointer;
+      &-ico--rotate {
+        transform: rotateX(180deg);
+      }
+    }
+  }
+  .description__wrapper {
+    margin-bottom: 24px;
+  }
+  .js-slider-brands {
+    display: flex;
+    width: 100%;
+    mask-image: none;
+    &__wrapper {
+      display: flex;
+      overflow: hidden;
+      flex-wrap: wrap;
+      gap: 16px 24px;
+      height: 140px;
+      margin-bottom: 24px;
+    }
+    &__wrapper--open {
+      transition: height 0.6s ease;
+      height: 240px;
+    }
+    &__wrapper--close {
+      transition: height 0.6s ease;
+      height: 140px;
+    }
+  }
+}
+@media (min-width: $screen-1120) {
+  .js-slider {
+    &__wrapper {
+      column-gap: 32px;
+    }
+  }
+  .brands {
+    &__wrapper {
+      margin-bottom: 50px;
+    }
+    &__item {
+      width: 240px;
+    }
+  }
+}

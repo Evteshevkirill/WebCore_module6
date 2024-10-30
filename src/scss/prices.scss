@@ -1,0 +1,146 @@
+.prices-description__wrapper {
+  max-width: 1440px;
+  padding: 16px 0;
+  margin-bottom: 16px;
+  background: linear-gradient(90deg, $color-main, $color-white);
+  border-top: 1px solid #d9fff5;
+}
+
+.prices {
+  &__wrapper {
+    margin-bottom: 40px;
+  }
+  &__slides-wrapper {
+    padding-bottom: 28px;
+  }
+  &__item-wrapper {
+    position: relative;
+    padding: 16px;
+    border-radius: 16px;
+    width: 260px;
+    height: 206px;
+    box-sizing: border-box;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__item-services {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  &__item-services-title {
+    font-weight: $medium;
+    font-size: $size-text;
+    color: $color-grey;
+    line-height: 18px;
+  }
+  &__item-btn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(110px, 140px);
+    gap: 3px;
+    width: 120px;
+    height: 32px;
+    border: none;
+    background-color: $color-pink;
+    border-radius: 16px;
+    cursor: pointer;
+  }
+  &__item-btn:hover {
+    opacity: 0.4;
+  }
+  &__item-btn-text {
+    font-family: $font-family;
+    font-size: 12px;
+    font-weight: $bold;
+    color: $color-white;
+    text-transform: uppercase;
+  }
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 16px;
+  }
+  &__text {
+    line-height: 20px;
+  }
+  &__offer-btn {
+    position: relative;
+    display: flex;
+    width: 192px;
+    text-decoration: none;
+    color: $text-color;
+    font-size: $size-title;
+    font-weight: $medium;
+  }
+  &__btn-ico {
+    position: absolute;
+    transform: translate(115px, 28px);
+  }
+}
+
+@media (min-width: $screen-768) {
+  .prices-description__wrapper {
+    margin-bottom: 0;
+  }
+  .prices {
+    &__wrapper {
+      margin-bottom: 47px;
+    }
+    &__item-wrapper {
+      padding: 0 16px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      text-align: left;
+      width: 100%;
+      height: auto;
+      border: none;
+      border-bottom: 1px solid #eaeaea;
+      border-radius: 0;
+      padding: 16px 16px;
+    }
+    &__slides-wrapper {
+      flex-direction: column;
+    }
+    &__item-services {
+      min-width: 65px;
+      text-align: left;
+    }
+    &__item-text {
+      width: 330px;
+    }
+    &__item-services-title {
+      display: none;
+    }
+    &__title-items {
+      display: inline-block;
+
+      padding-bottom: 40px;
+    }
+    &__item-btn {
+      position: static;
+      transform: none;
+    }
+    &__item-btn-translate {
+      transform: translateY(30px);
+    }
+    &__text {
+      width: 425px;
+    }
+    &__offer-btn {
+      gap: 10px;
+      width: 320px;
+    }
+    &__btn-ico {
+      position: static;
+      transform: none;
+    }
+  }
+}

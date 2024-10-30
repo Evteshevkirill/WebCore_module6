@@ -1,0 +1,153 @@
+@keyframes menu-open-mobile {
+  from {
+    left: -500px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes menu-open-table {
+  from {
+    right: -500px;
+  }
+  to {
+    right: 0;
+  }
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-white;
+  transition: all 0.3s ease;
+  &__content {
+    animation-name: menu-open-mobile;
+    animation-duration: 0.4s;
+    padding: 16px;
+    position: absolute;
+    padding-top: 24px;
+  }
+  &__close {
+    margin-bottom: 40px;
+  }
+  &__close-btn {
+    border: none;
+    background-color: $color-white;
+    background-size: cover;
+    cursor: pointer;
+  }
+  &__close-btn:hover {
+    opacity: 50%;
+  }
+  &__title {
+    position: relative;
+    font-weight: $bold;
+    font-size: 24px;
+    letter-spacing: -0.6px;
+    margin-bottom: 24px;
+  }
+  &__title::before {
+    content: '';
+    background: #41f6d7;
+    border-radius: 4px;
+    width: 3px;
+    height: 40px;
+    position: absolute;
+    transform: translate(-16px, -5px);
+  }
+  &__form-chat {
+    margin-bottom: 19px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__form-chat > input {
+    max-width: 380px;
+    padding: 12px 16px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+  }
+  &__form-chat > input::placeholder {
+    font-family: $font-family;
+    font-size: $size-title;
+    font-weight: $medium;
+    color: #b5b6bc;
+  }
+  &__confidens {
+    max-width: 380px;
+    text-align: left;
+    color: $color-grey;
+  }
+  &__confidens-text {
+    color: $color-pink;
+    cursor: pointer;
+  }
+  &__send-btn {
+    position: absolute;
+    margin-right: 16px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    width: 120px;
+    height: 32px;
+    border: none;
+    background-color: $color-pink;
+    border-radius: 16px;
+    cursor: pointer;
+  }
+  &__send-btn:hover {
+    opacity: 50%;
+  }
+  &__send-btn-text {
+    font-family: $font-family;
+    font-size: 12px;
+    font-weight: $bold;
+    color: $color-white;
+    text-transform: uppercase;
+  }
+
+  &__call--open,
+  &__chat--open {
+    display: block;
+    z-index: 3;
+  }
+}
+
+@media (min-width: $screen-768) {
+  .popup {
+    background-color: rgba($color: #fff, $alpha: 0.9);
+    &__content {
+      animation-name: menu-open-table;
+      animation-duration: 0.4s;
+      padding: 24px;
+      right: 0;
+      max-width: 440px;
+      height: 100%;
+      box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2),
+        -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+      background-color: $color-white;
+    }
+    &__title::before {
+      transform: translate(-25px, -5px);
+    }
+    &__close-btn {
+      position: absolute;
+      transform: translate(-90px, 35px);
+      background-color: rgba($color: #fff, $alpha: 0);
+    }
+  }
+}
+@media (min-width: $screen-1366) {
+  .popup {
+    &__content {
+      padding: 32px;
+    }
+  }
+}

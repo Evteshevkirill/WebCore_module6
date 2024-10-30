@@ -1,0 +1,167 @@
+@keyframes burger-open {
+  from {
+    left: -500px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+.menu-fixed {
+  animation-name: burger-open;
+  animation-duration: 0.4s;
+  display: none;
+  position: fixed;
+  background-color: rgba($color: #fff, $alpha: 0.9);
+  width: 100%;
+  height: 100svh;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+    position: fixed;
+    width: 100svh;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    background-color: $color-white;
+    transition: all 0.3s ease;
+    box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2),
+      -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+  }
+  &__header {
+    padding-top: 19px;
+    margin-bottom: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo-wrapper {
+    display: flex;
+    gap: 17px;
+  }
+  &__btn {
+    border: none;
+    background-color: $color-white;
+    background-size: cover;
+    cursor: pointer;
+  }
+  &__btn:hover {
+    opacity: 50%;
+  }
+  &__nav {
+    margin-bottom: 32px;
+  }
+  &__items {
+    list-style: none;
+  }
+  &__item {
+    margin-bottom: 24px;
+  }
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+  &__link {
+    font-size: $size-title;
+    font-weight: $medium;
+    color: $text-color;
+    text-decoration: none;
+  }
+  &__link:hover {
+    color: $color-grey;
+  }
+  &__link::before {
+    content: '';
+    background: #41f6d7;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    width: 4px;
+    height: 32px;
+    position: absolute;
+    left: 0;
+    top: 92px;
+  }
+  &__footer {
+    margin-top: auto;
+    padding-bottom: 32px;
+  }
+  &__callback {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  &__contacts {
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  &__email {
+    font-size: 16px;
+    color: $text-color;
+    text-decoration: none;
+  }
+  &__phone {
+    font-size: 16px;
+    color: $text-color;
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: none;
+    letter-spacing: -0.6px;
+  }
+  &__language {
+    display: flex;
+    gap: 7px;
+  }
+  &__lg {
+    font-size: $size-title;
+    font-weight: $medium;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  &__lg:hover {
+    color: $color-grey;
+  }
+  &__open {
+    display: block;
+  }
+}
+
+@media (min-width: $screen-768) {
+  .menu-fixed {
+    &__wrapper {
+      width: 320px;
+      padding: 0 24px;
+    }
+    &__footer {
+      margin-bottom: 32px;
+    }
+    &__contacts {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media (min-width: $screen-1366) {
+  .menu-fixed {
+    position: relative;
+    display: block;
+    max-width: 300px;
+    animation: none;
+    z-index: 0;
+    &__wrapper {
+      max-width: 300px;
+      box-shadow: none;
+      z-index: 0;
+    }
+    &__footer {
+      padding-bottom: 0;
+    }
+  }
+  .js-menu-fixed--close {
+    display: none;
+  }
+}

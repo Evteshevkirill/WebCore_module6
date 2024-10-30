@@ -1,0 +1,87 @@
+@import 'vars';
+@import 'fonts';
+@import 'header';
+@import 'services';
+@import 'about';
+@import 'brands';
+@import 'technic';
+@import 'prices';
+@import 'swiper';
+@import 'footer';
+@import 'popup';
+@import 'burger-fixed__menu';
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+li,
+a,
+ul,
+span,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-family;
+  font-weight: $regular;
+  font-size: $size-text;
+  letter-spacing: -0.2px;
+  background-color: $color-main;
+  color: $text-color;
+}
+
+.body_fixed {
+  overflow: hidden;
+}
+
+.container {
+  min-width: 320px;
+  padding: 0 16px;
+}
+
+@media (min-width: $screen-768) {
+  .container {
+    min-width: $screen-768;
+    padding: 0 24px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $screen-1120) {
+  .container {
+    max-width: $screen-1120;
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: $screen-1366) {
+  .body-container {
+    min-width: $screen-1120;
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+  }
+  .main-container {
+    position: relative;
+  }
+}
+
+@media (min-width: $screen-1440) {
+  .body-container {
+    max-width: 1440px;
+  }
+}

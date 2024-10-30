@@ -1,0 +1,40 @@
+.footer {
+  &__wrapper {
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-top: 1px solid #d9fff5;
+  }
+
+  &__text-info,
+  &__text-confidens,
+  &__text-offerta {
+    text-align: center;
+    font-weight: $medium;
+    color: $color-grey;
+    line-height: 16px;
+  }
+}
+
+@media (min-width: $screen-768) {
+  .footer {
+    &__wrapper {
+      max-width: 1120px;
+      padding-top: 32px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__text-info {
+      width: 218px;
+      text-align: start;
+    }
+    &__text-offerta {
+      max-width: 330px;
+      text-align: end;
+    }
+  }
+}

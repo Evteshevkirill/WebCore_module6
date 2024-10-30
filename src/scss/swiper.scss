@@ -1,0 +1,31 @@
+.swiper {
+  display: flex;
+  width: 100%;
+  height: auto;
+  mask-image: linear-gradient(to left, transparent, #000 10%);
+  &-wrapper {
+    box-sizing: content-box;
+    display: flex;
+    padding-bottom: 24px;
+  }
+  &-slide {
+    flex-shrink: 1;
+    display: block;
+    width: auto;
+    height: auto;
+  }
+  &-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: $screen-768) {
+  .swiper {
+    mask-image: none;
+    &-pagination {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.header {
+  background-color: $color-white;
+  &__wrapper {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    min-height: 90px;
+    background-color: $color-white;
+    border-bottom: 1px solid #d9fff5;
+  }
+  &__menu-callback {
+    display: none;
+  }
+  &__menu-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  &__menu-right {
+    display: flex;
+    align-items: center;
+  }
+  &__menu-orders {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  &__burger-btn,
+  &__callback-btn,
+  &__orders-btn {
+    border: none;
+    background-color: $color-white;
+    background-size: cover;
+    cursor: pointer;
+  }
+  &__burger-btn:hover {
+    opacity: 50%;
+  }
+
+  &__orders-btn:hover {
+    opacity: 50%;
+  }
+  &__callback-btn:hover {
+    opacity: 50%;
+  }
+  &__orders-btn:first-child {
+    position: relative;
+  }
+  &__orders-btn:first-child::before {
+    content: '';
+    background: #eaeaea;
+    width: 2px;
+    height: 32px;
+    position: absolute;
+    right: 60px;
+    top: 5px;
+  }
+}
+
+@media (min-width: $screen-768) {
+  .header {
+    &__menu-callback {
+      margin-right: 42px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    &__menu-left {
+      gap: 42px;
+    }
+    &__burger-btn {
+      position: relative;
+    }
+    &__burger-btn::after {
+      content: '';
+      background: #eaeaea;
+      width: 2px;
+      height: 32px;
+      position: absolute;
+      left: 60px;
+      top: 5px;
+    }
+  }
+}
+
+@media (min-width: $screen-1366) {
+  .header {
+    display: none;
+  }
+}
