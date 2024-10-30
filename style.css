@@ -411,7 +411,8 @@
     display: flex;
     justify-content: space-between;
     min-height: 90px;
-    background-color: #fff; }
+    background-color: #fff;
+    border-bottom: 1px solid #d9fff5; }
   .header__menu-callback {
     display: none; }
   .header__menu-left {
@@ -807,7 +808,6 @@
   margin-bottom: 40px; }
 
 .prices__slides-wrapper {
-  height: 206px;
   padding-bottom: 28px; }
 
 .prices__item-wrapper {
@@ -815,7 +815,7 @@
   padding: 16px;
   border-radius: 16px;
   width: 260px;
-  min-height: 206px;
+  height: 206px;
   box-sizing: border-box;
   background-color: #fff;
   display: flex;
@@ -884,27 +884,38 @@
     margin-bottom: 0; }
   .prices__wrapper {
     margin-bottom: 47px; }
-  .prices__slides-wrapper {
-    height: 100%; }
   .prices__item-wrapper {
-    position: static;
+    padding: 0 16px;
+    display: flex;
     justify-content: space-between;
     flex-direction: row;
+    align-items: center;
+    text-align: left;
     width: 100%;
-    height: 50px;
+    height: auto;
     border: none;
     border-bottom: 1px solid #eaeaea;
-    border-radius: 0; }
+    border-radius: 0;
+    padding: 16px 16px; }
   .prices__slides-wrapper {
-    display: flex;
     flex-direction: column; }
   .prices__item-services {
-    display: inline-block; }
+    min-width: 65px;
+    text-align: left; }
+  .prices__item-text {
+    width: 330px; }
+  .prices__item-services-title {
+    display: none; }
+  .prices__title-items {
+    display: inline-block;
+    padding-bottom: 40px; }
   .prices__item-btn {
     position: static;
     transform: none; }
+  .prices__item-btn-translate {
+    transform: translateY(30px); }
   .prices__text {
-    width: 410px; }
+    width: 425px; }
   .prices__offer-btn {
     gap: 10px;
     width: 320px; }
@@ -968,13 +979,25 @@
     max-width: 330px;
     text-align: end; } }
 
-@-webkit-keyframes menu-open {
+@-webkit-keyframes menu-open-mobile {
+  from {
+    left: -500px; }
+  to {
+    left: 0; } }
+
+@keyframes menu-open-mobile {
+  from {
+    left: -500px; }
+  to {
+    left: 0; } }
+
+@-webkit-keyframes menu-open-table {
   from {
     right: -500px; }
   to {
     right: 0; } }
 
-@keyframes menu-open {
+@keyframes menu-open-table {
   from {
     right: -500px; }
   to {
@@ -990,8 +1013,8 @@
   background-color: #fff;
   transition: all 0.3s ease; }
   .popup__content {
-    -webkit-animation-name: menu-open;
-            animation-name: menu-open;
+    -webkit-animation-name: menu-open-mobile;
+            animation-name: menu-open-mobile;
     -webkit-animation-duration: 0.4s;
             animation-duration: 0.4s;
     padding: 16px;
@@ -1087,6 +1110,10 @@
   .popup {
     background-color: rgba(255, 255, 255, 0.9); }
     .popup__content {
+      -webkit-animation-name: menu-open-table;
+              animation-name: menu-open-table;
+      -webkit-animation-duration: 0.4s;
+              animation-duration: 0.4s;
       padding: 24px;
       right: 0;
       max-width: 440px;

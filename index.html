@@ -11,7 +11,7 @@
       <div class="container">
         <div class="header__wrapper">
           <nav class="header__menu-left">
-            <button class="header__burger-btn js-menu-fixed-btn">
+            <button class="header__burger-btn js-burger-btn">
               <img class="header__burger-img" src="img/header__img/burger-ico.svg" alt="menu">
             </button>
             <div class="header__logo">
@@ -45,7 +45,7 @@
       </div>
     </header>
     <aside class="menu-fixed js-menu-fixed">
-      <div class="menu-fixed__wrapper .js-menu-fixed__wrapper">
+      <div class="menu-fixed__wrapper js-menu-fixed__wrapper">
         <div class="menu-fixed__header">
           <div class="menu-fixed__logo-wrapper">
             <button class="menu-fixed__btn js-menu-fixed--close">
@@ -409,8 +409,28 @@
                 <div class="swiper-slide">
                   <div class="prices__item-wrapper">
                     <div class="prices__item-services">
+                      <h3 class="prices__item-services-title prices__title-items">Ремонтные услуги</h3>
+                      <p class="prices__item-services-text prices__item-text">Тестирование с выдачей технического заключения</p>
+                    </div>
+                    <div class="prices__item-services">
+                      <h3 class="prices__item-services-title prices__title-items">Цена</h3>
+                      <p class="prices__item-services-text">1000</p>
+                    </div>
+                    <div class="prices__item-services">
+                      <h3 class="prices__item-services-title prices__title-items">Срок</h3>
+                      <p class="prices__item-services-text">30-120 мин</p>
+                    </div>
+                    <button class="prices__item-btn prices__item-btn-translate">
+                      <p class="prices__item-btn-text">Заказать</p>
+                      <img class="prices-item__ico" src="img/prices__img/order-ico.svg" alt="стрелочка-перейти">
+                    </button>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="prices__item-wrapper">
+                    <div class="prices__item-services">
                       <h3 class="prices__item-services-title">Ремонтные услуги</h3>
-                      <p class="prices__item-services-text">Тестирование с выдачей технического заключения</p>
+                      <p class="prices__item-services-text prices__item-text">Замена полифонического динамика</p>
                     </div>
                     <div class="prices__item-services">
                       <h3 class="prices__item-services-title">Цена</h3>
@@ -430,7 +450,7 @@
                   <div class="prices__item-wrapper">
                     <div class="prices__item-services">
                       <h3 class="prices__item-services-title">Ремонтные услуги</h3>
-                      <p class="prices__item-services-text">Замена полифонического динамика</p>
+                      <p class="prices__item-services-text prices__item-text">Замена дисплея</p>
                     </div>
                     <div class="prices__item-services">
                       <h3 class="prices__item-services-title">Цена</h3>
@@ -450,7 +470,7 @@
                   <div class="prices__item-wrapper">
                     <div class="prices__item-services">
                       <h3 class="prices__item-services-title">Ремонтные услуги</h3>
-                      <p class="prices__item-services-text">Замена дисплея</p>
+                      <p class="prices__item-services-text prices__item-text">Замена программного обеспечения</p>
                     </div>
                     <div class="prices__item-services">
                       <h3 class="prices__item-services-title">Цена</h3>
@@ -470,31 +490,11 @@
                   <div class="prices__item-wrapper">
                     <div class="prices__item-services">
                       <h3 class="prices__item-services-title">Ремонтные услуги</h3>
-                      <p class="prices__item-services-text">Замена программного обеспечения</p>
+                      <p class="prices__item-services-text prices__item-text">Диагностика</p>
                     </div>
                     <div class="prices__item-services">
                       <h3 class="prices__item-services-title">Цена</h3>
-                      <p class="prices__item-services-text">1000</p>
-                    </div>
-                    <div class="prices__item-services">
-                      <h3 class="prices__item-services-title">Срок</h3>
-                      <p class="prices__item-services-text">30-120 мин</p>
-                    </div>
-                    <button class="prices__item-btn">
-                      <p class="prices__item-btn-text">Заказать</p>
-                      <img class="prices-item__ico" src="img/prices__img/order-ico.svg" alt="стрелочка-перейти">
-                    </button>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="prices__item-wrapper">
-                    <div class="prices__item-services">
-                      <h3 class="prices__item-services-title">Ремонтные услуги</h3>
-                      <p class="prices__item-services-text">Диагностика</p>
-                    </div>
-                    <div class="prices__item-services">
-                      <h3 class="prices__item-services-title">Цена</h3>
-                      <p class="prices__item-services-text">1000</p>
+                      <p class="prices__item-services-text">Бесплатно</p>
                     </div>
                     <div class="prices__item-services">
                       <h3 class="prices__item-services-title">Срок</h3>
@@ -546,7 +546,7 @@
       </footer>
     </main>
     <div class="popup js-popup__chat">
-      <div class="popup__content js-popup__content">
+      <div class="popup__content js-popup__content-chat">
         <div class="popup__close">
           <button class="popup__close-btn js-popup__close">
             <img src="img/popup__img/close-ico.svg" alt="Закрыть меню" class="popup__close-img">
@@ -574,7 +574,7 @@
       </div>
     </div>
     <div class="popup js-popup__call">
-      <div class="popup__content js-popup__content">
+      <div class="popup__content js-popup__content-call">
         <div class="popup__close">
           <button class="popup__close-btn js-popup__close-btn">
             <img src="img/popup__img/close-ico.svg" alt="Закрыть меню" class="popup__close-img">
